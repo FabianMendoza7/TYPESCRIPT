@@ -1,0 +1,6 @@
+(()=>{
+    const myFunction = () : void => {
+        return;
+    }
+
+})()
