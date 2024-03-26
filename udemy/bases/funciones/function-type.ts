@@ -20,5 +20,5 @@
 
     // Declarar función con tipos
     let myFunction2: (y: number, z: number) => number;
-    myFunction2('abc');
+    //myFunction2('abc');
 })()

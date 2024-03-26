@@ -4,3 +4,4 @@
         return;
     };
 })();
+//# sourceMappingURL=void.js.map

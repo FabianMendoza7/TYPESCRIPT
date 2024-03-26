@@ -9,6 +9,5 @@
     console.log(AudioLevel);
     let currentAudio = AudioLevel.medium;
     currentAudio = 2;
-    // no permitido:
-    //currentAudio = 4;
 })();
+//# sourceMappingURL=enums.js.map

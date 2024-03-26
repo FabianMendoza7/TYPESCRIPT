@@ -4,3 +4,4 @@
     avengers = Number("333");
     console.log({ avengers });
 })();
+//# sourceMappingURL=numbers.js.map
