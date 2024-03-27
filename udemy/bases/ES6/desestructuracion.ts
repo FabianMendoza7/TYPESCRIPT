@@ -3,7 +3,7 @@
         nick: string;
         ironman: string;
         vision: string;
-        activo: string;
+        activo: boolean;
         poder: number;
     };
 
@@ -23,5 +23,11 @@
             console.log(ironman, resto);
     }
 
-    printAvenger(avengers);
+    //printAvenger(avengers);
+
+    // desestructuración de arreglos
+    const avengersArr: string[] = ['Cap. América', 'Ironman', 'Hulk'];
+    const [,ironman,] = avengersArr; // Solo necesito Ironman.
+
+
 })();
