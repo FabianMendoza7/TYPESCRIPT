@@ -1,77 +1,69 @@
 (()=>{
-type Carro = {
-  carroceria: string;
-  modelo: string;
-  antibalas: boolean;
-  pasajeros: number;
-  disparar?: () => void;
-};
 
-// Objetos
-const batimovil: Carro = {
-  carroceria: "Negra",
-  modelo: "6x6",
-  antibalas: true,
-  pasajeros:4
-};
+    interface Auto {
+        encender: boolean;
+        velocidanMaxima: number;
+        acelerar(): void;
+    }
 
-const bumblebee: Carro = {
-  carroceria: "Amarillo con negro",
-  modelo: "4x2",
-  antibalas: true,
-  pasajeros:4,
-  disparar(){ // El metodo disparar es opcional
-    console.log("Disparando");
-  }
-};
+    const conducirBatimovil = (auto): void => {
+        auto.encender = true;
+        auto.velocidanMaxima = 100;
+        auto.acelerar();
+    }
 
-type Villano = {
-  nombre: string;
-  edad: number;
-  mutante: boolean;
-};
+    const batimovil: Auto = {
+        encender: false,
+        velocidanMaxima: 0,
+        acelerar(){
+            console.log("... gogogo!!!");
+        }
+    }
 
-// Villanos debe de ser un arreglo de objetos personalizados
-const villanos: Villano[] = [{
-  nombre:"Lex Luthor",
-  edad: 54,
-  mutante:false
-},{
-  nombre: "Erik Magnus Lehnsherr",
-  edad: 49,
-  mutante: true
-},{
-  nombre: "James Logan",
-  edad: undefined,
-  mutante: true
-}];
+    interface Guason {
+        reir?: boolean;
+        comer?: boolean;
+        llorar?: boolean;
+    }
 
-// Multiples tipos
-// cree dos tipos, uno para charles y otro para apocalipsis
-type Charles = {
-  poder: string;
-  estatura: number;
-};
+    const guason: Guason = {
+        reir: true,
+        comer: true,
+        llorar: false
+    }
 
-type Apocalipsis = {
-  lider: boolean;
-  miembros: string[];
-}
+    const reir = (guason): void => {
+        if(guason.reir){
+            console.log("JAJAJAJA");
+        }
+    }
 
-const charles: Charles = {
-  poder:"psiquico",
-  estatura: 1.78
-};
+    // Interfaz para una función.
+    interface CiudadGotica {
+        (ciudadanos: string[]): number;
+    }
 
-const apocalipsis: Apocalipsis = {
-  lider:true,
-  miembros: ["Magneto","Tormenta","Psylocke","Angel"]
-}
+    const ciudadGotica: CiudadGotica = (ciudadanos: string[]): number => {
+        return ciudadanos.length;
+    }
 
-// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
-let mystique: Charles | Apocalipsis;
+    interface PersonaInterface{
+        edad: number;
+        estadoCivil: string;
+        nombre: string;
+        sexo: string;
+        imprimirBio(): void;
+    }
 
-mystique = charles;
-mystique = apocalipsis;
+    class Persona implements PersonaInterface {
+        public edad: number;
+        public estadoCivil: string;
+        public nombre: string;
+        public sexo: string;
+
+        imprimirBio(): void {
+            
+        }
+    }
 
 })()
