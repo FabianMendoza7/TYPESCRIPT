@@ -1,12 +1,10 @@
-import { Hero } from "./classes/Hero";
-import { powers } from "./data/powers";
+// import { Hero } from "./classes/Hero";
+// import { powers } from "./data/powers";
 
-const ironman: Hero = new Hero('Ironman', 1, 55);
+// const ironman: Hero = new Hero('Ironman', 1, 55);
 
-console.log(ironman);
-console.log(powers);
-
-
+// console.log(ironman);
+// console.log(powers);
 
 
-
+import { printObject } from "./generics/generics";
