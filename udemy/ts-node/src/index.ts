@@ -10,7 +10,7 @@
 
 // import { printObject } from "./generics/generics";
 
-//-2
+//-2-Generics
 
 // import { getPokemon } from './generics/get-pokemon';
 
@@ -19,4 +19,12 @@
 //     .catch(error => console.log(error))
 //     .finally(() => console.log("Fin de get-pokemon"))
 
-//-3
+//-3-Decorators
+import {Pokemon} from "./decorators/Pokemon";
+
+const charmander = new Pokemon("Charmander");
+
+//(Pokemon.prototype as any).customName = 'Pikachu';
+console.log(charmander.publicApi);
+charmander.publicApi = "https://greencode.deno.dev";
+charmander.savePokemonToDB(5);

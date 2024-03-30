@@ -16,4 +16,4 @@ const deadpool = {
     dangerLevel: 130
 };
 
-console.log(genericFunctionArray<Villian>(deadpool).dengerLevel);
+//console.log(genericFunctionArray<Villian>(deadpool).dengerLevel);
